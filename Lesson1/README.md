@@ -42,7 +42,7 @@ Python 的优势包括：
 
 # 下载安装 Python
 
-https://www.python.org/downloads/
+<https://www.python.org/downloads/>
 
 # Python 版本
 
