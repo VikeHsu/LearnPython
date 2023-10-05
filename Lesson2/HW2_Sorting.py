@@ -1,7 +1,7 @@
 import random
 import time
 
-TOTAL_NUMBER = 10000
+TOTAL_NUMBER = 10
 
 numbers1 = [*range(TOTAL_NUMBER)]
 random.shuffle(numbers1)
@@ -9,14 +9,32 @@ numbers2 = numbers1.copy()
 if TOTAL_NUMBER <= 50:
     print(numbers2)
 
-def swap(list,n,m):
+def Swap(list,n,m):
     temp = list[n]
     list[n] = list[m]
     list[m] = temp
 
-def your_sort(list):
+def BubbleSort(list):
     #TODO: write your sorting algorithm here.
-    print(list)
+    size = len(list)
+    for i in range(size):
+        for j in range(size-1,i,-1):
+            if list[i] > list[j]:
+                Swap(list,i,j)
+
+def QuickSort(list):
+    if len(list) <= 1:
+        return list
+    mid = list[len(list)//2]
+    left = []
+    right = []
+    for n in list:
+        if n < mid:
+            left.append(n)
+        elif n > mid:
+            right.append(n)
+    return QuickSort(left)+ [mid] + QuickSort(right)
+
 
 st = time.time()
 numbers1.sort()
@@ -25,7 +43,7 @@ elapse_time = et - st
 print("Official sorting algorithm cost " + str(elapse_time) + " seconds.") 
 
 st = time.time()
-your_sort(numbers2)
+numbers2 = QuickSort(numbers2)
 et = time.time()
 elapse_time = et - st
 if TOTAL_NUMBER <= 50:
