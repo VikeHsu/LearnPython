@@ -22,15 +22,15 @@ class restaurant:
     def increment_number_served(self, more_people):
         self.number_served += more_people
 
-my_restaurant = restaurant("3pig", "BBQ")
-print(my_restaurant.restaurant_name)
-print(my_restaurant.cuisine_type)
+# my_restaurant = restaurant("3pig", "BBQ")
+# print(my_restaurant.restaurant_name)
+# print(my_restaurant.cuisine_type)
 
-my_restaurant.describe_restaurant()
-my_restaurant.open_restaurant()
+# my_restaurant.describe_restaurant()
+# my_restaurant.open_restaurant()
 
-my_restaurant.set_number_served(100)
-print(my_restaurant.number_served)
+# my_restaurant.set_number_served(100)
+# print(my_restaurant.number_served)
 
-my_restaurant.increment_number_served(10)
-my_restaurant.count_number_served()
+# my_restaurant.increment_number_served(10)
+# my_restaurant.count_number_served()
